@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>QSearch</title>
+<style>
+body {
+font-family: Arial, sans-serif;
+}
+
+.container {
+max-width: 600px;
+margin: 0 auto;
+padding: 20px;
+background-color: #f5f5f5;
+}
+
+h1 {
+text-align: center;
+}
+
+label {
+display: block;
+margin-bottom: 10px;
+}
+
+input[type="text"],
+select {
+width: 100%;
+padding: 10px;
+font-size: 16px;
+border: 1px solid #ccc;
+border-radius: 4px;
+box-sizing: border-box;
+}
+
+.button {
+margin-top: 20px;
+text-align: center;
+}
+
+.button input[type="submit"] {
+padding: 10px 20px;
+font-size: 16px;
+background-color: #4CAF50;
+color: #fff;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+}
+
+.button input[type="submit"]:hover {
+background-color: #45a049;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>QSearch</h1>
+<form>
+<label for="employeeNumber">Employee Number (6 digits):</label>
+<input type="text" id="employeeNumber" pattern="[0-9]{6}" required>
+
+<label for="traineeName">Name of the Trainee (max 30 letters):</label>
+<input type="text" id="traineeName" maxlength="30" required>
+
+<label for="domain">Domain:</label>
+<select id="domain" required>
+<option value="">Select Domain</option>
+<option value="JEE">JEE</option>
+<option value=".NET">.NET</option>
+</select>
+
+<label for="moduleName">Module Name:</label>
+<select id="moduleName" required>
+<option value="">Select Module Name</option>
+</select>
+
+<div class="button">
+<input type="submit" value="Search">
+</div>
+</form>
+</div>
+</body>
+</html>
